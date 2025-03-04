@@ -1,0 +1,27 @@
+[package]
+name = "seaf-share"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4.40", features = ["serde"] }
+clap = { version = "4.5", features = ["derive"] }
+cli-table = "0.4.9"
+glob = "0.3.2"
+human_bytes = "0.4.3"
+# mini-v8 = "0.4.1"
+regex = "1.11"
+rquickjs = "0.9.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_json5 = "0.2.1"
+ureq = { version = "3.0", features = ["json", "socks-proxy"] }
+url = { version = "2.5", features = ["serde"] }
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+panic = "abort"
+codegen-units = 1
