@@ -2,6 +2,11 @@
 name = "seaf-share"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Seafile share CLI tool"
+repository = "https://codeberg.org/ttyS0/seaf-share"
+categories = ["command-line-utilities"]
+keywords = ["seafile", "cli"]
 
 [dependencies]
 anyhow = "1.0"
