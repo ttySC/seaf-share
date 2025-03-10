@@ -1,0 +1,28 @@
+steps:
+  build:
+    image: rust
+    commands:
+      - cargo build -j1
+    when:
+      event: [push, pull_request]
+
+  publish:
+    image: rust
+    commands:
+      - cargo build --release -j1
+      - cargo publish -j1 --token "$CARGO_TOKEN"
+    environment:
+      CARGO_TOKEN:
+        from_secret: cargo_token
+    when:
+      event: tag
+
+  release:
+    image: woodpeckerci/plugin-release
+    settings:
+      files:
+        - ./target/release/seaf-share
+      api_key:
+        from_secret: user_release_token
+    when:
+      event: tag

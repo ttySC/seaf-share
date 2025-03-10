@@ -1,5 +1,7 @@
 # seaf-share
 
+[![badge](https://ci.codeberg.org/api/badges/14311/status.svg)](https://ci.codeberg.org/repos/14311)
+
 Seafile share CLI tool
 
 * List files in a share
