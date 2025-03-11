@@ -1,6 +1,7 @@
 # seaf-share
 
-[![badge](https://ci.codeberg.org/api/badges/14311/status.svg)](https://ci.codeberg.org/repos/14311)
+[![ci badge](https://ci.codeberg.org/api/badges/14311/status.svg)](https://ci.codeberg.org/repos/14311)
+[![crates.io badge](https://img.shields.io/crates/v/seaf-share)](https://crates.io/crates/seaf-share)
 
 Seafile share CLI tool
 
